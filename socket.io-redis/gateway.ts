@@ -142,11 +142,7 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
       };
       body.media = conversationAttribute?.media || [];
 
-      /**
-       * Find The patient
-       */
-      const patientInfo =
-        await this.groupsSocketService.allPatientBySid(conversationSid);
+
       /**
        * broadcast the msg
        */
